@@ -1,0 +1,533 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "custom-iframe/block",
+  "version": "1.0.19",
+  "title": "Custom iFrame",
+  "category": "embed",
+  "icon": "embed-generic",
+  "description": "Embed 100+ Sources with Custom IFrame",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "custom-iframe",
+  "editorStyle": "file:./index.css",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "customId": {
+      "type": "string",
+      "default": ""
+    },
+    "source": {
+      "type": "string",
+      "default": "default"
+    },
+    "iframeUrl": {
+      "type": "string",
+      "default": "https://example.com"
+    },
+    "shadow": {
+      "type": "object",
+      "default": null
+    },
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "iframeHeight": {
+      "type": "string",
+      "default": "500px"
+    },
+    "iframeHeightTablet": {
+      "type": "string",
+      "default": "400px"
+    },
+    "iframeHeightMobile": {
+      "type": "string",
+      "default": "300px"
+    },
+    "autoHeight": {
+      "type": "boolean",
+      "default": false
+    },
+    "showScrollbar": {
+      "type": "boolean",
+      "default": true
+    },
+    "refreshInterval": {
+      "type": "integer",
+      "default": 0
+    },
+    "lazyLoad": {
+      "type": "boolean",
+      "default": false
+    },
+    "lazyLoadImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "lazyLoadImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "paddingTablet": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "paddingMobile": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "iframeWidth": {
+      "type": "string",
+      "default": "100%"
+    },
+    "iframeWidthTablet": {
+      "type": "string",
+      "default": "100%"
+    },
+    "iframeWidthMobile": {
+      "type": "string",
+      "default": "100%"
+    },
+    "colorValue": {
+      "type": "string",
+      "default": ""
+    },
+    "gradientValue": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundStyle": {
+      "type": "string",
+      "default": "solid"
+    },
+    "border": {
+      "type": "object",
+      "default": {}
+    },
+    "backgroundImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "backgroundImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "pdfSourceType": {
+      "type": "string",
+      "default": "file"
+    },
+    "pdfFileId": {
+      "type": "number",
+      "default": 0
+    },
+    "pdfFileUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "pdfUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "pdfLazyLoad": {
+      "type": "boolean",
+      "default": false
+    },
+    "theme": {
+      "type": "string",
+      "default": "default"
+    },
+    "themeColor": {
+      "type": "string",
+      "default": ""
+    },
+    "zoom": {
+      "type": "string",
+      "default": "auto"
+    },
+    "defaultSelectionTool": {
+      "type": "string",
+      "default": "0"
+    },
+    "defaultScrolling": {
+      "type": "string",
+      "default": "0"
+    },
+    "defaultSpreads": {
+      "type": "string",
+      "default": "0"
+    },
+    "pdfToolbar": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfToolbarPosition": {
+      "type": "string",
+      "default": "top"
+    },
+    "pdfPrintDownload": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfPresentationMode": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfTextCopy": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfAddText": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfDraw": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfAddImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfRotateAccess": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfDetails": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfViewMode": {
+      "type": "boolean",
+      "default": false
+    },
+    "pdfZoomIn": {
+      "type": "boolean",
+      "default": true
+    },
+    "pdfZoomOut": {
+      "type": "boolean",
+      "default": true
+    },
+    "sandbox": {
+      "type": "boolean",
+      "default": false
+    },
+    "extraAttributes": {
+      "type": "boolean",
+      "default": false
+    },
+    "sandboxOptions": {
+      "type": "array",
+      "default": []
+    },
+    "customAttributes": {
+      "type": "string",
+      "default": ""
+    },
+    "enableDeviceFrame": {
+      "type": "boolean",
+      "default": false
+    },
+    "deviceFrameType": {
+      "type": "string",
+      "default": "desktop"
+    },
+    "enableWatermark": {
+      "type": "boolean",
+      "default": false
+    },
+    "watermarkType": {
+      "type": "string",
+      "default": "text"
+    },
+    "watermarkText": {
+      "type": "string",
+      "default": "Watermark"
+    },
+    "watermarkImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "watermarkImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "watermarkPosition": {
+      "type": "string",
+      "default": "bottom-right"
+    },
+    "watermarkOpacity": {
+      "type": "number",
+      "default": 0.5
+    },
+    "watermarkColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.5)"
+    },
+    "watermarkImgSize": {
+      "type": "string",
+      "default": ""
+    },
+    "xTheme": {
+      "type": "string",
+      "default": "light"
+    },
+    "xHideMedia": {
+      "type": "boolean",
+      "default": false
+    },
+    "xHideThread": {
+      "type": "boolean",
+      "default": false
+    },
+    "xLang": {
+      "type": "string",
+      "default": "en"
+    },
+    "xDnt": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeAutoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeMute": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubeControls": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubeLoop": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubePrivacyMode": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubePlaysinline": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubeStartTime": {
+      "type": "number",
+      "default": 0
+    },
+    "youtubeEndTime": {
+      "type": "number",
+      "default": 0
+    },
+    "youtubePlaylist": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeColor": {
+      "type": "string",
+      "default": "red"
+    },
+    "youtubeRel": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeFullscreen": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubeDisableAnnotations": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeKeyboardControls": {
+      "type": "boolean",
+      "default": true
+    },
+    "youtubeCcLoadPolicy": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeCcLangPref": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeLang": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubePlayerApiSupport": {
+      "type": "boolean",
+      "default": false
+    },
+    "youtubeJsCallback": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeWidgetReferrer": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeCustomParameters": {
+      "type": "string",
+      "default": ""
+    },
+    "vimeoAutoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoMuted": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoLoop": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoControls": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoStartTime": {
+      "type": "string",
+      "default": ""
+    },
+    "vimeoQuality": {
+      "type": "string",
+      "default": "auto"
+    },
+    "vimeoAutopause": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoPlaysinline": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoColor": {
+      "type": "string",
+      "default": "#00adef"
+    },
+    "vimeoByline": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoPortrait": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoDnt": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoKeyboard": {
+      "type": "boolean",
+      "default": true
+    },
+    "vimeoPip": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoSpeed": {
+      "type": "boolean",
+      "default": false
+    },
+    "vimeoTransparent": {
+      "type": "boolean",
+      "default": false
+    },
+    "fullscreen": {
+      "type": "boolean",
+      "default": false
+    },
+    "fullscreenPosition": {
+      "type": "string",
+      "default": "bottom-right"
+    },
+    "fullscreenPositionX": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenPositionXTablet": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenPositionXMobile": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenPositionY": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenPositionYTablet": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenPositionYMobile": {
+      "type": "string",
+      "default": "10px"
+    },
+    "fullscreenIconColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "fullscreenIconHoverColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "fullscreenBgColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.6)"
+    },
+    "fullscreenBgHoverColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.8)"
+    },
+    "fullscreenClosePosition": {
+      "type": "string",
+      "default": "same"
+    },
+    "fullscreenCloseIconColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "fullscreenCloseIconHoverColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "fullscreenCloseBgColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.7)"
+    },
+    "fullscreenCloseBgHoverColor": {
+      "type": "string",
+      "default": "rgba(220, 38, 38, 0.9)"
+    }
+  }
+}
