@@ -1,0 +1,285 @@
+# Translation of Plugins - Angie – Agentic AI - Stable (latest release) in Italian
+# This file is distributed under the same license as the Plugins - Angie – Agentic AI - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-03-05 20:38:46+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: it\n"
+"Project-Id-Version: Plugins - Angie – Agentic AI - Stable (latest release)\n"
+
+#: modules/angie-app/components/angie-app.php:71
+#: modules/angie-app/components/angie-app.php:72
+msgid "Home"
+msgstr "Home"
+
+#: modules/code-snippets/classes/deployment-meta-box.php:209
+#: modules/consent-manager/components/consent-notice.php:62
+msgid "You do not have permission to perform this action."
+msgstr "Non hai i permessi per eseguire questa azione."
+
+#: modules/theme-manager/components/theme-updater.php:110
+msgid "Theme update failed."
+msgstr "L'aggiornamento del tema non è riuscito."
+
+#: modules/theme-manager/components/theme-installer.php:129
+msgid "Theme installed successfully."
+msgstr "Il tema è stato installato correttamente."
+
+#: modules/theme-manager/components/theme-installer.php:117
+msgid "Theme installation failed."
+msgstr "L'installazione del tema non è riuscita."
+
+#: modules/theme-manager/components/theme-activator.php:78
+#: modules/theme-manager/components/theme-deleter.php:65
+msgid "Theme not found."
+msgstr "Il tema non è stato trovato."
+
+#: modules/plugin-manager/components/plugin.php:90
+msgid "Plugin update failed."
+msgstr "L'aggiornamento del plugin non è riuscito."
+
+#: modules/consent-manager/components/consent-page.php:322
+msgid "Approved"
+msgstr "Approvato"
+
+#: modules/code-snippets/classes/deployment-meta-box.php:74
+#: modules/consent-manager/components/consent-page.php:320
+msgid "Status:"
+msgstr "Stato:"
+
+#: modules/consent-manager/components/consent-page.php:267
+msgid "Privacy Policy"
+msgstr "Politica sulla privacy"
+
+#: modules/code-snippets/classes/deployment-meta-box.php:205
+#: modules/consent-manager/components/consent-page.php:187
+msgid "Security check failed."
+msgstr "Il controllo di sicurezza non è riuscito."
+
+#: modules/consent-manager/components/consent-page.php:39
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: modules/angie-settings/components/settings.php:195
+msgid "Failed to update setting."
+msgstr "Impossibile aggiornare le impostazioni."
+
+#: modules/angie-settings/components/preferences.php:68
+#: modules/code-snippets/classes/list-table-manager.php:50
+msgid "Status"
+msgstr "Stato"
+
+#: classes/module-base.php:106 classes/module-base.php:116
+msgid "Something went wrong."
+msgstr "Qualcosa è andato storto."
+
+#. Author of the plugin
+#: angie.php
+msgid "Elementor.com"
+msgstr "Elementor.com"
+
+#. Description of the plugin
+#: angie.php
+msgid "Agentic AI for WordPress"
+msgstr "Agentic AI for WordPress"
+
+#. Plugin URI of the plugin
+#: angie.php
+msgid "https://elementor.com/pages/angie-early-access"
+msgstr "https://elementor.com/pages/angie-early-access"
+
+#. Plugin Name of the plugin
+#: angie.php modules/angie-app/components/angie-app.php:46
+#: modules/angie-app/components/angie-app.php:47
+#: modules/consent-manager/components/consent-notice.php:36
+#: modules/consent-manager/components/consent-page.php:253
+#: modules/wp-abilities/classes/mcp-server-registrar.php:47
+msgid "Angie"
+msgstr "Angie"
+
+#: modules/theme-manager/components/theme-updater.php:73
+msgid "No themes specified for update."
+msgstr "Non è stato specificato alcun tema per l'aggiornamento."
+
+#: modules/theme-manager/components/theme-installer.php:66
+msgid "Theme is already installed."
+msgstr "Il tema risulta già installato."
+
+#: modules/theme-manager/components/theme-deleter.php:103
+msgid "Theme deleted successfully."
+msgstr "Il tema è stato eliminato con successo."
+
+#: modules/theme-manager/components/theme-deleter.php:81
+msgid "Cannot delete the default theme."
+msgstr "Non è possibile eliminare il tema predefinito."
+
+#: modules/theme-manager/components/theme-deleter.php:73
+msgid "Cannot delete the active theme."
+msgstr "Non è possibile eliminare il tema attivo."
+
+#: modules/theme-manager/components/theme-activator.php:143
+msgid "Theme deactivated successfully. Switched to default theme."
+msgstr "Il tema è stato disattivato con successo. È stato attivato il tema predefinito."
+
+#: modules/theme-manager/components/theme-activator.php:133
+msgid "Theme deactivation failed."
+msgstr "La disattivazione del tema non è riuscita."
+
+#: modules/theme-manager/components/theme-activator.php:123
+msgid "Current theme is already the default theme."
+msgstr "Il tema attuale è già il tema predefinito."
+
+#: modules/theme-manager/components/theme-activator.php:106
+msgid "Theme activated successfully."
+msgstr "Il tema è stato attivato correttamente."
+
+#: modules/theme-manager/components/theme-activator.php:96
+msgid "Theme activation failed."
+msgstr "L'attivazione del tema non è riuscita."
+
+#: modules/theme-manager/components/theme-activator.php:86
+msgid "Theme is already active."
+msgstr "Il tema è già attivo."
+
+#: modules/plugin-manager/components/plugin.php:114
+msgid "Update failed for an unknown reason."
+msgstr "L'aggiornamento non è riuscito per motivi sconosciuti."
+
+#: modules/plugin-manager/components/plugin.php:54
+msgid "No plugins specified for update."
+msgstr "Non è stato specificato nessun plugin per l'aggiornamento."
+
+#: modules/consent-manager/components/consent-page.php:348
+msgid "This is your website's unique identifier used by Angie services."
+msgstr "Questo è l'identificativo univoco del tuo sito web utilizzato dai servizi di Angie."
+
+#: modules/consent-manager/components/consent-page.php:343
+msgid "Website Unique ID:"
+msgstr "ID univoco del sito web:"
+
+#: modules/consent-manager/components/consent-page.php:339
+msgid "Website Information"
+msgstr "Informazioni sul sito web"
+
+#: modules/consent-manager/components/consent-page.php:332
+msgid "Are you sure you want to deactivate Angie?"
+msgstr "Vuoi davvero disattivare Angie?"
+
+#: modules/consent-manager/components/consent-page.php:324
+msgid "Not Approved"
+msgstr "Non approvato"
+
+#: modules/consent-manager/components/consent-page.php:264
+msgid "I agree to the "
+msgstr "Accetto i "
+
+#: modules/consent-manager/components/consent-page.php:38
+#: modules/consent-manager/components/consent-page.php:316
+msgid "Angie Settings"
+msgstr "Impostazioni di Angie"
+
+#: modules/consent-manager/components/consent-notice.php:46
+msgid "No, I deny"
+msgstr "No, nego il consenso"
+
+#: modules/consent-manager/components/consent-notice.php:43
+msgid "Yes, I approve"
+msgstr "Si, sono d'accordo"
+
+#: modules/consent-manager/components/consent-notice.php:39
+msgid "Do you allow loading external scripts?"
+msgstr "Consenti il caricamento di script esterni?"
+
+#: modules/angie-settings/components/wp-options.php:296
+msgid "Some options failed to update."
+msgstr "Alcune opzioni non sono state aggiornate."
+
+#: modules/angie-settings/components/wp-options.php:295
+msgid "All WordPress options updated successfully."
+msgstr "Tutte le opzioni di WordPress sono state aggiornate con successo."
+
+#. translators: %s is the option name
+#: modules/angie-settings/components/wp-options.php:284
+msgid "Failed to update option \"%s\"."
+msgstr "Non è possibile aggiornare l'opzione \"%s\"."
+
+#. translators: %s is the option name
+#: modules/angie-settings/components/wp-options.php:264
+msgid "Option \"%s\" is not allowed to be updated."
+msgstr "L'opzione \"%s\" non può essere aggiornata."
+
+#: modules/angie-settings/components/wp-options.php:252
+msgid "Options parameter must be a non-empty object/array."
+msgstr "I parametri Opzione deve essere un oggetto/array non vuoto."
+
+#: modules/angie-settings/components/wp-options.php:228
+msgid "WordPress settings retrieved successfully."
+msgstr "Le impostazioni di WordPress sono state recuperate con successo."
+
+#: modules/angie-settings/components/wp-options.php:201
+msgid "Sorry, I can't download the language file."
+msgstr "Non riesco a scaricare il file della lingua."
+
+#: modules/angie-settings/components/wp-options.php:191
+msgid "Sorry, the file system is locked."
+msgstr "Il file system è bloccato."
+
+#: modules/angie-settings/components/wp-options.php:179
+msgid "Sorry, you are not allowed to install languages."
+msgstr "Non hai i permessi per installare lingue."
+
+#: modules/angie-settings/components/settings.php:205
+msgid "Setting updated successfully."
+msgstr "L'impostazione è stata aggiornata con successo."
+
+#: modules/angie-settings/components/settings.php:184
+msgid "Failed to encode value to JSON."
+msgstr "Non è possibile codificare il valore in JSON."
+
+#: modules/angie-settings/components/settings.php:174
+msgid "Invalid JSON format."
+msgstr "Il formato JSON non è valido."
+
+#: modules/angie-settings/components/settings.php:162
+msgid "Missing value parameter."
+msgstr "Il parametro valore è mancante."
+
+#: modules/angie-settings/components/preferences.php:62
+msgid "Angie - AI Assistant"
+msgstr "Angie - AI Assistant"
+
+#: modules/angie-settings/components/page-templates.php:92
+msgid "Failed to retrieve page templates."
+msgstr "Impossibile recuperare i template di pagina."
+
+#: modules/angie-app/components/angie-app.php:264
+msgid "Get Started with Angie"
+msgstr "Inizia a lavorare con Angie"
+
+#: modules/angie-app/components/angie-app.php:261
+msgid "To use the Angie App, you need to approve loading external scripts."
+msgstr "Per utilizzare il plugin Angie, è necessario approvare il caricamento di script esterni."
+
+#: modules/angie-app/components/angie-app.php:260
+msgid "External Scripts Consent Required"
+msgstr "È necessario il consenso per il caricamento degli script esterni"
+
+#: modules/consent-manager/components/consent-page.php:278
+msgid "Ask Angie AI Assistant"
+msgstr "Chiedi all'assistente AI Angie"
+
+#: modules/angie-app/components/angie-app.php:247
+msgid "Completing authentication..."
+msgstr "Autenticazione in corso..."
+
+#: modules/angie-app/components/angie-app.php:249
+msgid "Redirecting to sign in..."
+msgstr "Reindirizzamento per effettuare l'accesso in corso..."
+
+#: modules/consent-manager/components/consent-page.php:319
+msgid "External Script Loading"
+msgstr "Caricamento di script esterni"
