@@ -695,3 +695,5 @@ Stack trace:
 #32 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-blog-header.php(16): wp()
 #33 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\index.php(17): require('C:\\Users\\Utente...')
 #34 {main}
+[22-Aug-2026 20:21:13 UTC] PHP Warning:  Undefined array key "editor_post_id" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\modules\history\revisions-manager.php on line 363
+[22-Aug-2026 20:22:31 UTC] PHP Warning:  Undefined array key "editor_post_id" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\modules\history\revisions-manager.php on line 363
