@@ -3,7 +3,7 @@ import re
 import webbrowser
 import os
 import time
-import sys  # <-- AGGIUNTO!
+import shutil
 
 import numpy as np
 import svgpathtools
@@ -22,25 +22,13 @@ def generate_unique_filename(prefix="desmos_graph"):
     timestamp = int(time.time())
     return f"{prefix}_{timestamp}.html"
 
-# ===== LEGGI IL FILE SVG DALLA RIGA DI COMANDO =====
-# Se viene passato un argomento, usa quello come percorso del file SVG
-if len(sys.argv) > 1:
-    svg_file_path = sys.argv[1]
-else:
-    # Percorso di default per test (se eseguito senza argomenti)
-    svg_file_path = r"C:\Users\Utente\Downloads\images_vecto_SPLINE_D24.svg"
-
-# Verifica che il file esista
-if not os.path.exists(svg_file_path):
-    print(f"❌ Errore: File non trovato - {svg_file_path}")
-    sys.exit(1)
+# ===== ENTER FILE LOCATION HERE =====
+# Modifica questo percorso con il tuo file SVG di input
+svg_file_path = r"C:\Users\Utente\Downloads\images_vecto_SPLINE_D24.svg"
 
 # Leggi il file SVG
-with open(svg_file_path, "r", encoding="utf-8") as f:
+with open(svg_file_path, "r") as f:
     data = str(f.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
-
-# ===== IL RESTO DEL CODICE RIMANE INVARIATO =====
-# (tutte le funzioni e l'elaborazione rimangono uguali)
 
 # ===== FUNZIONI ESISTENTI (invariate) =====
 
@@ -304,8 +292,6 @@ for segment in path:
 
     else:
         print("Unknown segment type: " + str(type(segment)))
-
-# ===== GENERAZIONE DEL FILE HTML CON NOME UNIVOCO =====
 
 desmos = """
 <!DOCTYPE html>
