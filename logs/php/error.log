@@ -697,3 +697,472 @@ Stack trace:
 #34 {main}
 [22-Aug-2026 20:21:13 UTC] PHP Warning:  Undefined array key "editor_post_id" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\modules\history\revisions-manager.php on line 363
 [22-Aug-2026 20:22:31 UTC] PHP Warning:  Undefined array key "editor_post_id" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\modules\history\revisions-manager.php on line 363
+[24-Aug-2026 23:13:08 UTC] PHP Fatal error:  Cannot redeclare function process_svg_with_python() (previously declared in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code:2) in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1269) : eval()'d code on line 2
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1199): WINP_Snippet_MetaBox->validate_code('// Gestisce la ...', 'php')
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(343): WINP_Snippet_MetaBox->after_saving_snippet(581)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5193): do_action('save_post', 581, Object(WP_Post), true)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5295): wp_insert_post(Array, false, true)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\includes\post.php(449): wp_update_post(Array)
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\post.php(227): edit_post()
+#8 {main}
+[24-Aug-2026 23:13:14 UTC] PHP Fatal error:  Cannot redeclare function process_svg_with_python() (previously declared in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code:2) in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1269) : eval()'d code on line 2
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1199): WINP_Snippet_MetaBox->validate_code('// Gestisce la ...', 'php')
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(343): WINP_Snippet_MetaBox->after_saving_snippet(581)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5193): do_action('save_post', 581, Object(WP_Post), true)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5295): wp_insert_post(Array, false, true)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\includes\post.php(449): wp_update_post(Array)
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\post.php(227): edit_post()
+#8 {main}
+[24-Aug-2026 23:13:34 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:00 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:20 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:21 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:22 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:23 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:26 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:26 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:27 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:30 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:33 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:40 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:41 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:43 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:14:45 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:07 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:21 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:24 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:24 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:27 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:15:31 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:16:54 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:16:54 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:16:54 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:16:54 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:02 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:06 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:06 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:07 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:07 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:08 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:08 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:23 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:23 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:23 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:24 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:36 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:36 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:39 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:39 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:39 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:17:40 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:12 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:12 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:13 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:13 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:13 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:21 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:21 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:40 UTC] PHP Warning:  require_once(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php:132
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(242): WINP_Plugin->get_execute_object()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(57): WINP_Plugin->load_global()
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php(303): WINP_Plugin->__construct()
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): {closure:C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php:298}('')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-settings.php(771): do_action('init')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-config.php(103): require_once('C:\\Users\\Utente...')
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-load.php(50): require_once('C:\\Users\\Utente...')
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Utente...')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\index.php(10): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:40 UTC] PHP Warning:  require_once(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php:132
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(242): WINP_Plugin->get_execute_object()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(57): WINP_Plugin->load_global()
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php(303): WINP_Plugin->__construct()
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): {closure:C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php:298}('')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-settings.php(771): do_action('init')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-config.php(103): require_once('C:\\Users\\Utente...')
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-load.php(50): require_once('C:\\Users\\Utente...')
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Utente...')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\index.php(17): require('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:51 UTC] PHP Warning:  require_once(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php:132
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(242): WINP_Plugin->get_execute_object()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(57): WINP_Plugin->load_global()
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php(303): WINP_Plugin->__construct()
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): {closure:C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php:298}('')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-settings.php(771): do_action('init')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-config.php(103): require_once('C:\\Users\\Utente...')
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-load.php(50): require_once('C:\\Users\\Utente...')
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Utente...')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\edit.php(10): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:51 UTC] PHP Warning:  require_once(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php/includes/class.execute.snippet.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php:132
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(242): WINP_Plugin->get_execute_object()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php(57): WINP_Plugin->load_global()
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php(303): WINP_Plugin->__construct()
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): {closure:C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\insert_php.php:298}('')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-settings.php(771): do_action('init')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-config.php(103): require_once('C:\\Users\\Utente...')
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-load.php(50): require_once('C:\\Users\\Utente...')
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Utente...')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\index.php(17): require('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.plugin.php on line 132
+[24-Aug-2026 23:19:59 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:19:59 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:00 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:00 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:01 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:02 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:20:02 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:21:24 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:21:24 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:21:25 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:21:25 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:23:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:23:17 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:12 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:12 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:13 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:13 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:18 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:24:18 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:03 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:03 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:50 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:50 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:53 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:25:53 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:04 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:04 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:09 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:10 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:26:11 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:07 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:08 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:28 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:28 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:29 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:29 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:31 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:32 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:33 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:33 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:34 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:34 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:35 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:35 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:28:59 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:29:00 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:29:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:29:15 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:02 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:02 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:03 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:03 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:05 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:30:06 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:04 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:04 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:06 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:06 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:08 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:08 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:33 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:31:33 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:33:34 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:33:34 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:50 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:50 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:51 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:51 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:51 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:51 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:52 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:54 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:55 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:56 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:34:56 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:36:28 UTC] PHP Warning:  include(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\vendor\composer/../../src/wrappers/wp-remote-handler.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:36:28 UTC] PHP Warning:  include(): Failed opening 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\vendor\composer/../../src/wrappers/wp-remote-handler.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:36:28 UTC] PHP Fatal error:  Uncaught Error: Class "Yoast\WP\SEO\Wrappers\WP_Remote_Handler" not found in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\src\generated\container.php:3455
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\vendor_prefixed\symfony\dependency-injection\Container.php(212): Yoast\WP\SEO\Generated\Cached_Container->getWincherClientService()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\vendor_prefixed\symfony\dependency-injection\Container.php(195): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->make('Yoast\\WP\\SEO\\Co...', 1)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\src\surfaces\classes-surface.php(38): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->get('Yoast\\WP\\SEO\\Co...')
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\src\helpers\wincher-helper.php(59): Yoast\WP\SEO\Surfaces\Classes_Surface->get('Yoast\\WP\\SEO\\Co...')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\admin\class-admin.php(356): Yoast\WP\SEO\Helpers\Wincher_Helper->login_status()
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\admin\class-admin.php(280): WPSEO_Admin->localize_admin_global_script()
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): WPSEO_Admin->config_page_scripts('index.php')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin-header.php(123): do_action('admin_enqueue_s...', 'index.php')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\index.php(137): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-seo\src\generated\container.php on line 3455
+[24-Aug-2026 23:39:01 UTC] PHP Warning:  include(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:01 UTC] PHP Warning:  include(): Failed opening 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:01 UTC] PHP Fatal error:  Uncaught Error: Class "Yoast\WP\SEO\Wrappers\WP_Remote_Handler" not found in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php:3455
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(212): Yoast\WP\SEO\Generated\Cached_Container->getWincherClientService()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(195): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->make('Yoast\\WP\\SEO\\Co...', 1)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\surfaces\classes-surface.php(38): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->get('Yoast\\WP\\SEO\\Co...')
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\helpers\wincher-helper.php(59): Yoast\WP\SEO\Surfaces\Classes_Surface->get('Yoast\\WP\\SEO\\Co...')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(356): Yoast\WP\SEO\Helpers\Wincher_Helper->login_status()
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(280): WPSEO_Admin->localize_admin_global_script()
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): WPSEO_Admin->config_page_scripts('plugins.php')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin-header.php(123): do_action('admin_enqueue_s...', 'plugins.php')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\plugins.php(637): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php on line 3455
+[24-Aug-2026 23:39:14 UTC] PHP Warning:  include(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:14 UTC] PHP Warning:  include(): Failed opening 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:14 UTC] PHP Fatal error:  Uncaught Error: Class "Yoast\WP\SEO\Wrappers\WP_Remote_Handler" not found in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php:3455
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(212): Yoast\WP\SEO\Generated\Cached_Container->getWincherClientService()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(195): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->make('Yoast\\WP\\SEO\\Co...', 1)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\surfaces\classes-surface.php(38): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->get('Yoast\\WP\\SEO\\Co...')
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\helpers\wincher-helper.php(59): Yoast\WP\SEO\Surfaces\Classes_Surface->get('Yoast\\WP\\SEO\\Co...')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(356): Yoast\WP\SEO\Helpers\Wincher_Helper->login_status()
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(280): WPSEO_Admin->localize_admin_global_script()
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): WPSEO_Admin->config_page_scripts('plugins.php')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin-header.php(123): do_action('admin_enqueue_s...', 'plugins.php')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\plugins.php(637): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php on line 3455
+[24-Aug-2026 23:39:53 UTC] PHP Warning:  include(C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php): Failed to open stream: No such file or directory in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:53 UTC] PHP Warning:  include(): Failed opening 'C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor\composer/../../src/wrappers/wp-remote-handler.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\elementor\vendor\composer\ClassLoader.php on line 576
+[24-Aug-2026 23:39:53 UTC] PHP Fatal error:  Uncaught Error: Class "Yoast\WP\SEO\Wrappers\WP_Remote_Handler" not found in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php:3455
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(212): Yoast\WP\SEO\Generated\Cached_Container->getWincherClientService()
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\vendor_prefixed\symfony\dependency-injection\Container.php(195): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->make('Yoast\\WP\\SEO\\Co...', 1)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\surfaces\classes-surface.php(38): YoastSEO_Vendor\Symfony\Component\DependencyInjection\Container->get('Yoast\\WP\\SEO\\Co...')
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\helpers\wincher-helper.php(59): Yoast\WP\SEO\Surfaces\Classes_Surface->get('Yoast\\WP\\SEO\\Co...')
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(356): Yoast\WP\SEO\Helpers\Wincher_Helper->login_status()
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\admin\class-admin.php(280): WPSEO_Admin->localize_admin_global_script()
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(341): WPSEO_Admin->config_page_scripts('plugins.php')
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#8 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#9 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\admin-header.php(123): do_action('admin_enqueue_s...', 'plugins.php')
+#10 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\plugins.php(637): require_once('C:\\Users\\Utente...')
+#11 {main}
+  thrown in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\wordpress-se.disabled\src\generated\container.php on line 3455
+[24-Aug-2026 23:43:14 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:16 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:17 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:18 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:18 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:20 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:20 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:21 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:22 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:22 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:23 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:26 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:29 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:43:35 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php.disabled\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[24-Aug-2026 23:44:53 UTC] PHP Parse error:  syntax error, unexpected token "\", expecting ")" in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code on line 29
+[25-Aug-2026 00:16:46 UTC] PHP Fatal error:  Cannot redeclare function process_svg_with_python() (previously declared in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\includes\class.execute.snippet.php(803) : eval()'d code:2) in C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1269) : eval()'d code on line 2
+Stack trace:
+#0 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-content\plugins\insert-php\admin\metaboxes\snippet-metabox.php(1199): WINP_Snippet_MetaBox->validate_code('// Gestisce la ...', 'php')
+#1 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(343): WINP_Snippet_MetaBox->after_saving_snippet(606)
+#2 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#4 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5193): do_action('save_post', 606, Object(WP_Post), true)
+#5 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-includes\post.php(5295): wp_insert_post(Array, false, true)
+#6 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\includes\post.php(449): wp_update_post(Array)
+#7 C:\Users\Utente\Local Sites\your-own-blaiprint\app\public\wp-admin\post.php(227): edit_post()
+#8 {main}
+[25-Aug-2026 00:42:00 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:00 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:01 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:02 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:03 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:03 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:03 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:03 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:04 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:05 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:06 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:06 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:06 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:07 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:07 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:07 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:07 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:08 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:08 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:08 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:08 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:09 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:09 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:09 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:09 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:10 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:10 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:10 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:10 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:11 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:11 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:11 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:11 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:11 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:12 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:12 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:12 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:13 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:13 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:13 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:13 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:14 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:14 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:14 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:15 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:15 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:15 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:15 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:15 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:18 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:23 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:25 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:25 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:25 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:25 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:26 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:26 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:26 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:26 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:27 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:42:28 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:43:02 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:43:27 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:43:52 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:44:27 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:44:27 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:44:27 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:44:42 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:45:45 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:45:52 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:47:20 UTC] Python version: Python 3.14.0
+[25-Aug-2026 00:48:42 UTC] Python version: Python 3.14.0
+[25-Aug-2026 14:39:44 UTC] ERRORE XML: String not started expecting ' or "
+
+Malformed declaration expecting version
+
+Blank needed here
+
+parsing XML declaration: '?>' expected
+
+AttValue: " or ' expected
+
+internal error: xmlParseStartTag: problem parsing attributes
+
+
+Couldn't find end of Start Tag svg line 2
+
+Extra content at the end of the document
+
+
+[25-Aug-2026 14:40:06 UTC] ERRORE XML: String not started expecting ' or "
+
+Malformed declaration expecting version
+
+Blank needed here
+
+parsing XML declaration: '?>' expected
+
+AttValue: " or ' expected
+
+internal error: xmlParseStartTag: problem parsing attributes
+
+
+Couldn't find end of Start Tag svg line 2
+
+Extra content at the end of the document
+
+
+[25-Aug-2026 14:41:53 UTC] DEBUG: SVG pulito salvato in: C:/Users/Utente/Downloads/debug/svg_clean_6a8da9b1d82e6.svg
+[25-Aug-2026 14:41:53 UTC] DEBUG: Dimensione SVG pulito: 544357 byte
+[25-Aug-2026 14:45:03 UTC] DEBUG: SVG pulito salvato in: C:/Users/Utente/Downloads/debug/svg_clean_6a8daa6fe2aee.svg
+[25-Aug-2026 14:45:03 UTC] DEBUG: Dimensione SVG pulito: 256082 byte
+[25-Aug-2026 14:47:41 UTC] DEBUG: SVG pulito salvato in: C:/Users/Utente/Downloads/debug/svg_clean_6a8dab0dd8385.svg
+[25-Aug-2026 14:47:41 UTC] DEBUG: Dimensione SVG pulito: 4010587 byte
