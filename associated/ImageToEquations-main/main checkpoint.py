@@ -1,264 +1,171 @@
-# main.py - Versione ADATTATA per il tuo sito (modifiche minime)
+# main.py - Converte un file SVG in equazioni Desmos (versione corretta)
+#
+# Uso:  python main_checkpoint.py percorso\del\file.svg
+#
+# Richiede solo:  pip install svgpathtools
+import json
+import math
 import os
-import sys
 import re
-import webbrowser
-import numpy as np
-import svgpathtools
-from svgpathtools import Line, CubicBezier
+import sys
+import time
 
-# ===== MODIFICA 1: Ricevi il file SVG come argomento =====
-if len(sys.argv) > 1:
-    svg_file_path = sys.argv[1]
-else:
+from svgpathtools import Arc, CubicBezier, Line, QuadraticBezier, parse_path
+
+# ===== IMPOSTAZIONI =====
+FLIP_Y = True          # SVG ha l'asse y verso il basso, Desmos verso l'alto: True = immagine dritta
+DECIMALS = 3           # cifre decimali nelle equazioni
+DESMOS_API_KEY = "dcb31709b452b1cf9dc26972add0fda6"
+
+# ===== INPUT =====
+if len(sys.argv) < 2:
     print("ERRORE: Specificare il percorso del file SVG")
     sys.exit(1)
 
-# ===== MODIFICA 2: Cartella di output in Downloads =====
-output_dir = os.path.join(os.path.expanduser("~"), "Downloads", "Equazioni_Desmos")
-os.makedirs(output_dir, exist_ok=True)
-
-# Verifica che il file esista
+svg_file_path = sys.argv[1]
 if not os.path.exists(svg_file_path):
     print(f"ERRORE: File non trovato - {svg_file_path}")
     sys.exit(1)
 
-# ===== LEGGI IL FILE SVG (come nell'originale) =====
+output_dir = os.path.join(os.path.expanduser("~"), "Downloads", "Equazioni_Desmos")
+os.makedirs(output_dir, exist_ok=True)
+
 with open(svg_file_path, "r", encoding="utf-8") as f:
-    data = str(f.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
+    data = f.read()
 
-# Enter file location here
-#file = open(r"C:\Users\Utente\Downloads\images_vecto_SPLINE_D40.svg", "r")
-#data = str(file.read()).replace('fill="#000000" opacity="1.000000" stroke="none"', "")
-#file.close()
 
-# ===== FUNZIONI (INVARIATE) =====
-def _tokenize_path(pathfinder):
-    FLOAT_RE = re.compile(r"[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?")
-    for x in re.compile("([MmZzLlHhVvCcSsQqTtAa])").split(pathfinder):
-        if x in set("MmZzLlHhVvCcSsQqTtAa"):
-            yield x
-        for token in FLOAT_RE.findall(x):
-            yield token
+# ===== FUNZIONI =====
+def num(v):
+    """Numero in formato LaTeX; i negativi vanno tra parentesi per evitare '+-'."""
+    s = f"{v:.{DECIMALS}f}".rstrip("0").rstrip(".")
+    if s in ("", "-0"):
+        s = "0"
+    return f"({s})" if s.startswith("-") else s
 
-def aplusbiFormat(real, imaginary):
-    return real + imaginary * 1j
 
-def extract_path(pathfinder, current_pos=0j):
-    elements = list(_tokenize_path(pathfinder))
-    elements.reverse()
-    segments = []
-    start_pos = None
-    command = None
+def pt(z):
+    """Punto complesso -> (x, y) con eventuale inversione dell'asse y."""
+    return z.real, (-z.imag if FLIP_Y else z.imag)
 
-    while elements:
-        if elements[-1] in set("MmZzLlHhVvCcSsQqTtAa"):
-            command = elements.pop()
-            absolute = command in set("MZLHVCSQTA")
-            command = command.upper()
+
+def bernstein(vals):
+    """Polinomio di Bernstein in t per 2, 3 o 4 valori (retta, quadratica, cubica)."""
+    v = [num(x) for x in vals]
+    if len(v) == 2:
+        return f"(1-t)\\cdot {v[0]}+t\\cdot {v[1]}"
+    if len(v) == 3:
+        return (f"(1-t)^2\\cdot {v[0]}+2\\cdot t\\cdot (1-t)\\cdot {v[1]}"
+                f"+t^2\\cdot {v[2]}")
+    return (f"(1-t)^3\\cdot {v[0]}+3\\cdot t\\cdot (1-t)^2\\cdot {v[1]}"
+            f"+3\\cdot t^2\\cdot (1-t)\\cdot {v[2]}+t^3\\cdot {v[3]}")
+
+
+def segment_to_latex(seg):
+    """Equazione parametrica (x(t), y(t)) con t in [0, 1] (default di Desmos)."""
+    if isinstance(seg, Line):
+        points = [seg.start, seg.end]
+    elif isinstance(seg, QuadraticBezier):
+        points = [seg.start, seg.control, seg.end]
+    else:  # CubicBezier
+        points = [seg.start, seg.control1, seg.control2, seg.end]
+    xs, ys = zip(*(pt(p) for p in points))
+    return "\\left(" + bernstein(xs) + "," + bernstein(ys) + "\\right)"
+
+
+def arc_to_cubics(arc):
+    """Approssima un arco ellittico con una serie di Bezier cubiche (max 90 gradi l'una)."""
+    rx, ry = arc.radius.real, arc.radius.imag
+    phi = math.radians(arc.rotation)
+    cos_p, sin_p = math.cos(phi), math.sin(phi)
+    theta1 = math.radians(arc.theta)
+    dtheta = math.radians(arc.delta)
+
+    n = max(1, math.ceil(abs(dtheta) / (math.pi / 2)))
+    step = dtheta / n
+    k = 4.0 / 3.0 * math.tan(step / 4.0)
+
+    def point(a):
+        x, y = rx * math.cos(a), ry * math.sin(a)
+        return arc.center + complex(x * cos_p - y * sin_p, x * sin_p + y * cos_p)
+
+    def deriv(a):
+        x, y = -rx * math.sin(a), ry * math.cos(a)
+        return complex(x * cos_p - y * sin_p, x * sin_p + y * cos_p)
+
+    for i in range(n):
+        a1 = theta1 + i * step
+        a2 = a1 + step
+        p0, p3 = point(a1), point(a2)
+        yield CubicBezier(p0, p0 + k * deriv(a1), p3 - k * deriv(a2), p3)
+
+
+# ===== LETTURA DEI PATH =====
+translate_re = re.compile(
+    r"translate\(\s*([-+0-9.eE]+)(?:[\s,]+([-+0-9.eE]+))?\s*\)"
+)
+
+segments = []
+n_paths = 0
+
+for tag in re.findall(r"<path\b[^>]*>", data, re.DOTALL):
+    d_match = re.search(r'\bd\s*=\s*"([^"]*)"', tag, re.DOTALL)
+    if not d_match:
+        continue
+    n_paths += 1
+
+    # parse_path gestisce tutti i comandi (M L H V C S Q T A Z, maiuscoli e minuscoli)
+    path = parse_path(d_match.group(1))
+
+    t_match = re.search(r'\btransform\s*=\s*"([^"]*)"', tag)
+    if t_match:
+        tr = translate_re.fullmatch(t_match.group(1).strip())
+        if tr:
+            path = path.translated(complex(float(tr.group(1)), float(tr.group(2) or 0)))
         else:
-            if command is None:
-                raise ValueError("Errore nel parsing del path")
+            print(f"ATTENZIONE: transform non supportato ignorato: {t_match.group(1)}")
 
-        if command == "M":
-            x = elements.pop()
-            y = elements.pop()
-            pos = float(x) + float(y) * 1j
-            if absolute:
-                current_pos = pos
-            else:
-                current_pos += pos
-            start_pos = current_pos
-            command = "L"
-
-        elif command == "Z":
-            if not (current_pos == start_pos):
-                segments.append(Line(current_pos, start_pos))
-            current_pos = start_pos
-            command = None
-
-        elif command == "L":
-            x = elements.pop()
-            y = elements.pop()
-            pos = float(x) + float(y) * 1j
-            if not absolute:
-                pos += current_pos
-            segments.append(Line(current_pos, pos))
-            current_pos = pos
-
-        elif command == "C":
-            control1 = float(elements.pop()) + float(elements.pop()) * 1j
-            control2 = float(elements.pop()) + float(elements.pop()) * 1j
-            final = float(elements.pop()) + float(elements.pop()) * 1j
-
-            if not absolute:
-                control1 += current_pos
-                control2 += current_pos
-                final += current_pos
-
-            segments.append(CubicBezier(current_pos, control1, control2, final))
-            current_pos = final
-
-    return segments
-
-# ===== ELABORAZIONE =====
-# PATTERN FLESSIBILE: cerca d=" in qualsiasi punto del tag path
-pathArray = re.findall(r'<path[^>]*d="([^"]*)"', data, re.DOTALL)
-
-print(f"DEBUG: Trovati {len(pathArray)} path nel SVG")
-
-pathString = ""
-for path in pathArray:
-    pathString += path
-
-path = extract_path(pathString)
-
-equations, regularEquations = [], []
-for segment in path:
-
-    if isinstance(segment, svgpathtools.path.Line):
-        start = aplusbiFormat(segment.start.real, segment.start.imag)
-        end = aplusbiFormat(segment.end.real, segment.end.imag)
-
-        if end.real - start.real != 0 and end.imag - start.imag != 0:
-            m = (end.imag - start.imag) / (end.real - start.real)
-            b = start.imag - m * start.real
-            xMin = min(start.real, end.real)
-            xMax = max(start.real, end.real)
-            yMin = min(start.imag, end.imag)
-            yMax = max(start.imag, end.imag)
-
-            equations.append(
-                "y="
-                + str(m)
-                + "x+"
-                + str(b)
-                + "\\\\left\\\\{"
-                + str(xMin)
-                + "\\\\le x \\\\le "
-                + str(yMin)
-                + "\\\\right\\\\}\\\\left\\\\{"
-                + str(yMin)
-                + "\\\\le y \\\\le "
-                + str(yMax)
-                + "\\\\right\\\\}"
-            )
-            regularEquations.append(lambda x: m * x + b)
-        if end.real - start.real == 0:
-            xMin = min(start.real, end.real)
-            xMax = max(start.real, end.real)
-            yMin = min(start.imag, end.imag)
-            yMax = max(start.imag, end.imag)
-
-            equations.append(
-                "x="
-                + str(start.real)
-                + "\\\\left\\\\{"
-                + str(xMin)
-                + "\\\\le x \\\\le "
-                + str(yMin)
-                + "\\\\right\\\\}\\\\left\\\\{"
-                + str(yMin)
-                + "\\\\le y \\\\le "
-                + str(yMax)
-                + "\\\\right\\\\}"
-            )
-            regularEquations.append(lambda x: start.real)
+    for seg in path:
+        if isinstance(seg, Arc):
+            segments.extend(arc_to_cubics(seg))
+        elif isinstance(seg, (Line, QuadraticBezier, CubicBezier)):
+            if abs(seg.end - seg.start) > 0 or not isinstance(seg, Line):
+                segments.append(seg)
         else:
-            yMin = min(start.imag, end.imag)
-            yMax = max(start.imag, end.imag)
+            print("Segmento sconosciuto ignorato: " + str(type(seg)))
 
-            equations.append(
-                "x="
-                + str(start.real)
-                + "\\\\left\\\\{"
-                + str(yMin)
-                + "\\\\le y \\\\le "
-                + str(yMax)
-                + "\\\\right\\\\}"
-            )
-            regularEquations.append(lambda x: start.real)
+print(f"DEBUG: Trovati {n_paths} path nel SVG, {len(segments)} segmenti")
+if not segments:
+    print("ERRORE: nessun segmento trovato nel file SVG")
+    sys.exit(1)
 
-    elif isinstance(segment, svgpathtools.path.CubicBezier):
-        p0 = aplusbiFormat(segment.start.real, segment.start.imag)
-        p1 = aplusbiFormat(segment.control1.real, segment.control1.imag)
-        p2 = aplusbiFormat(segment.control2.real, segment.control2.imag)
-        p3 = aplusbiFormat(segment.end.real, segment.end.imag)
+# ===== EQUAZIONI E LIMITI DEL GRAFICO =====
+equations = [segment_to_latex(s) for s in segments]
 
-        equations.append(
-            "\\\\left((1-t)^3*"
-            + str(p0.real)
-            + "+3*t*(1-t)^2*"
-            + str(p1.real)
-            + "+3*t^2*(1-t)*"
-            + str(p2.real)
-            + "+t^3*"
-            + str(p3.real)
-            + ", (1-t)^3*"
-            + str(p0.imag)
-            + "+3*t*(1-t)^2*"
-            + str(p1.imag)
-            + "+3*t^2*(1-t)*"
-            + str(p2.imag)
-            + "+t^3*"
-            + str(p3.imag)
-            + ")\\\\right)"
-        )
-        regularEquations.append(
-            lambda t: (1 - t) ** 3 * p0
-                      + 3 * t * (1 - t) ** 2 * p1
-                      + 3 * t ** 2 * (1 - t) * p2
-                      + t ** 3 * p3
-        )
+x_min = y_min = float("inf")
+x_max = y_max = float("-inf")
+for s in segments:
+    sx0, sx1, sy0, sy1 = s.bbox()
+    if FLIP_Y:
+        sy0, sy1 = -sy1, -sy0
+    x_min, x_max = min(x_min, sx0), max(x_max, sx1)
+    y_min, y_max = min(y_min, sy0), max(y_max, sy1)
 
-    elif isinstance(segment, svgpathtools.path.QuadraticBezier):
-        p0 = aplusbiFormat(segment.start.real, segment.start.imag)
-        p1 = aplusbiFormat(segment.control.real, segment.control.imag)
-        p2 = aplusbiFormat(segment.end.real, segment.end.imag)
+w = (x_max - x_min) or 1.0
+h = (y_max - y_min) or 1.0
+bounds = {
+    "left": x_min - w * 0.05,
+    "right": x_max + w * 0.05,
+    "bottom": y_min - h * 0.05,
+    "top": y_max + h * 0.05,
+}
 
-        equations.append(
-            "\\\\left((1-t)^2*"
-            + str(p0.real)
-            + "+2*t*(1-t)*"
-            + str(p1.real)
-            + "+t^2*"
-            + str(p2.real)
-            + ", (1-t)^2*"
-            + str(p0.imag)
-            + "+2*t*(1-t)*"
-            + str(p1.imag)
-            + "+t^2*"
-            + str(p2.imag)
-            + ")\\\\right))"
-        )
-        regularEquations.append(
-            lambda t: (1 - t) ** 2 * p0 + 2 * t * (1 - t) * p1 + t ** 2 * p2
-        )
+expressions = [
+    {"id": f"seg{i}", "latex": eq, "color": "#000000"}
+    for i, eq in enumerate(equations)
+]
 
-    elif isinstance(segment, svgpathtools.path.Arc):
-        p0 = aplusbiFormat(segment.start.real, segment.start.imag)
-        p1 = aplusbiFormat(segment.end.real, segment.end.imag)
-        r = aplusbiFormat(segment.radius.real, segment.radius.imag)
-
-        equations.append(
-            "\\\\left("
-            + str(p0.real)
-            + "+"
-            + str(r.real)
-            + "*\\cos(t), "
-            + str(p0.imag)
-            + "+"
-            + str(r.imag)
-            + "*\\sin(t)\\\\right)"
-        )
-        regularEquations.append(lambda t: p0 + r * np.exp(1j * t))
-
-    else:
-        print("Unknown segment type: " + str(type(segment)))
-
-# ===== GENERAZIONE HTML (INVARIATA) =====
-desmos = """
-<!DOCTYPE html>
+# ===== GENERAZIONE HTML =====
+HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -270,59 +177,36 @@ desmos = """
 </style>
 </head>
 <body>
-<script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 <div id="calculator"></div>
+<script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=__API_KEY__"></script>
 <script>
- var elt = document.getElementById('calculator');
- var calculator = Desmos.GraphingCalculator(elt);
-"""
-
-desmos += (
-    "calculator.setMathBounds({ left: "
-    + str(-194.97)
-    + ", right: "
-    + str(8852.635)
-    + ", bottom: "
-    + str(-221.556)
-    + ", top: "
-    + str(6152.893)
-    + " });\n"
-)
-
-for i in range(len(equations)):
-    desmos += (
-        "calculator.setExpression({ id: 'a-slider"
-        + str(i)
-        + "', latex: '"
-        + equations[i]
-        + "', color: Desmos.Colors.BLACK });\n"
-    )
-
-desmos += """
+var calculator = Desmos.GraphingCalculator(document.getElementById('calculator'));
+calculator.setMathBounds(__BOUNDS__);
+calculator.setExpressions(__EXPRESSIONS__);
 </script>
 </body>
 </html>
 """
 
-# ===== MODIFICA 3: Salva in Downloads con timestamp =====
-timestamp = int(os.times().system)
-if timestamp < 1000:
-    import time
-    timestamp = int(time.time())
+html = (
+    HTML_TEMPLATE
+    .replace("__API_KEY__", DESMOS_API_KEY)
+    .replace("__BOUNDS__", json.dumps(bounds))
+    .replace("__EXPRESSIONS__", json.dumps(expressions))
+)
 
-filename = f"desmos_graph_{timestamp}.html"
-filepath = os.path.join(output_dir, filename)
+# ===== SALVATAGGIO =====
+timestamp = int(time.time())
 
+filepath = os.path.join(output_dir, f"desmos_graph_{timestamp}.html")
 with open(filepath, "w", encoding="utf-8") as f:
-    f.write(desmos)
+    f.write(html)
 
-# ===== MODIFICA 4: Salva equazioni in Downloads =====
 equations_file = os.path.join(output_dir, f"equations_{timestamp}.txt")
 with open(equations_file, "w", encoding="utf-8") as f:
-    for i in range(len(equations)):
-        f.write(equations[i].replace("\\\\", "\\") + "\n")
+    for eq in equations:
+        f.write(eq + "\n")
 
-# ===== OUTPUT PER DEBUG (leggi da PHP) =====
 print(f"HTML salvato: {filepath}")
 print(f"Equazioni salvate: {equations_file}")
 print(f"Numero di equazioni: {len(equations)}")
